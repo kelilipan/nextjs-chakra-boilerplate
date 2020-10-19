@@ -1,0 +1,38 @@
+{
+  "name": "nextjs-chakra-boilerplate",
+  "version": "1.0.0",
+  "description": "A next.js with chakra-ui boilerplate to kickstart your project.",
+  "author": "Anvaqta Tangguh Wisesa <hi@wisesa.dev> (https://wisesa.dev)",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint . --fix",
+    "start": "next start",
+    "export": "yarn build && next export"
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^1.0.0-rc.5",
+    "next": "9.5.5",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-icons": "^3.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.2",
+    "prettier": "^2.1.2"
+  },
+  "lint-staged": {
+    "*.{jsx, js}": "yarn lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
